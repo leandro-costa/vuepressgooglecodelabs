@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="full">
   <google-codelab :id="data.codelabId" :title="data.codelabTitle">
     <div v-if="data.steps && data.steps.length">
       <div v-for="(step, index) in data.steps" :key="index">
@@ -31,3 +31,9 @@ export default {
 }
 </script>
 
+<style lang="stylus">
+#app
+.full
+  width: 100%
+  height 100%
+</style>
