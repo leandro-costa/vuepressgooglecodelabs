@@ -220,4 +220,9 @@ export default {
 .full
   width: 100%
   height 100%
+#next-step 
+google-codelab #drawer ol li[completed] .step:before 
+  background $accentColor
+#previous-step
+  color: $accentColor
 </style>
