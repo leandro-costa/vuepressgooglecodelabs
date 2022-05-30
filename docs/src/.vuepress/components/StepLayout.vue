@@ -1,13 +1,7 @@
 <template>
 <div class="full">
   <google-codelab :id="data.codelabId" :title="data.codelabTitle">
-    <div v-if="data.steps && data.steps.length">
-      <div v-for="(step, index) in data.steps" :key="index">
-        <google-codelab-step :label="step.label" :duration="step.duration">
-          {{ step.details }}
-        </google-codelab-step>
-      </div>
-    </div>
+    <Content/>
   </google-codelab>
 
   <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
@@ -21,7 +15,7 @@
 <script>
 
 export default {
-  name: 'StepsLayout',
+  name: 'StepLayout',
 
   computed: {
     data () {
