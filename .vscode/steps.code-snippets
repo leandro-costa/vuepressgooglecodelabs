@@ -1,0 +1,16 @@
+{
+    "step":{
+        "prefix": "step",
+        "body": ["<Step label=\"$1\" duration=\"$2\" >",
+                "$3",
+                "</Step>"]
+    },
+    "stepLayout":{
+        "prefix": "stepLayout",
+        "body": ["---",
+            "layout: StepLayout",
+            "codelabId: codelab-demo-id ",
+            "codelabTitle: A codelab demo",
+            "---"]
+    }
+}

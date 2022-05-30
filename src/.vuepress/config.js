@@ -1,6 +1,10 @@
 const { description } = require('../../package')
 
 module.exports = {
+  
+  base:'/vuepressgooglecodelabs',
+  dest: 'docs',
+
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
@@ -31,7 +35,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
+    repo: 'leandro-costa/vuepressgooglecodelabs',
     editLinks: false,
     docsDir: '',
     editLinkText: '',
@@ -50,17 +54,38 @@ module.exports = {
           children: [
             '',
             ['google-codelab','A codelab demo'],
+            ['java','A java codelab demo'],
           ]
         }
       ],
     }
   },
+  
+  markdown: {
+
+    extendMarkdown: md => {
+        md.use(require("markdown-it-plantuml"))
+        //md.use(require("markdown-it-footnote"))
+        md.use(require("markdown-it-deflist"))
+        md.use(require("markdown-it-katex"))
+        //md.use(require("markdown-it-include"))
+        //md.use(require("markdown-it-task-lists"))
+    },
+    lineNumbers: true
+
+  },
+
 
   /**
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+     ['@vuepress/plugin-medium-zoom', {
+            options: {
+                margin: 0,
+                background: '#252525'
+            }
+        }],
   ]
 }
