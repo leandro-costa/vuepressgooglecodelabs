@@ -23,10 +23,6 @@ module.exports = {
     ['meta', { name: 'theme-color', content: '#1A73E8' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }]
-    ,['meta', { name: 'viewport', content: 'width=device-width, minimum-scale=1.0,initial-scale=1.0, user-scalable=yes' }]
-    ,['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono' }]
-    ,['link', { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' }]
-    ,['link', { rel: 'stylesheet', href: 'https://storage.googleapis.com/codelab-elements/codelab-elements.css' }]
   ],
 
   /**
@@ -55,6 +51,8 @@ module.exports = {
             '',
             ['google-codelab','A codelab demo'],
             ['java','A java codelab demo'],
+            ['noprint','NoPrint  page'],
+            ['print','Print  demo'],
           ]
         }
       ],
@@ -65,10 +63,10 @@ module.exports = {
 
     extendMarkdown: md => {
         md.use(require("markdown-it-plantuml"))
-        //md.use(require("markdown-it-footnote"))
+        md.use(require("markdown-it-footnote"))
         md.use(require("markdown-it-deflist"))
         md.use(require("markdown-it-katex"))
-        //md.use(require("markdown-it-include"))
+        md.use(require("markdown-it-include"))
         //md.use(require("markdown-it-task-lists"))
     },
     lineNumbers: true
