@@ -1,5 +1,23 @@
 const { description } = require('../../package')
 
+const glob = require('glob')
+
+// function for loading all MD files in a directory
+const getChildren = function(parent, path) {
+  return glob
+    .sync(parent + '/' + path + '/**/*.md')
+    .map(f => {
+      // remove "parent" and ".md"
+      f = f.slice(parent.length + 1, -3)
+      // remove README
+      if (f.endsWith('README')) {
+        f = f.slice(0, -6)
+      }
+      return f
+    })
+    .sort()
+}
+
 module.exports = {
   
   base:'/vuepressgooglecodelabs',
@@ -42,21 +60,20 @@ module.exports = {
         link: '/guide/',
       }      
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            ['google-codelab','A codelab demo'],
-            ['java','A java codelab demo'],
-            ['noprint','NoPrint  page'],
-            ['print','Print  demo'],
-          ]
-        }
-      ],
-    }
+    sidebar: [
+      {
+        title: 'Google codelabs',
+        collapsable: true,
+        sidebarDepth: 2,
+        children: getChildren('src', 'step-coures')
+      },
+      {
+        title: 'Pagedjs polyfill',
+        collapsable: true,
+        children: getChildren('src', 'view-print')
+      }
+    ]
+    
   },
   
   markdown: {
