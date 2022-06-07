@@ -56,8 +56,8 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
+        text: 'Coures',
+        link: '/step-coures/',
       }      
     ],
     sidebar: [

@@ -1,7 +1,5 @@
 # Referencias 
 
-## Apostilas 
-
 [^caelumoo]: Caelum. Java e Orientação a Objetos - Curso fj-11.
 
 [^k19oo]: K19-Treinamentos. (2013). Orientação a Objetos em Java, 220.
@@ -9,8 +7,6 @@
 [^UFF]: Leandro A. F. Fernandes, Marcos Lage, Isabel Rosseti. 2ª Lista de Exercícios Orientação a Objetos. Universidade Federal Fluminense, Instituto de Computação, Departamento de Ciência da Computação, Programação de Computadores II
 
 [^Takenami]: Takenami, Igor. Introdução a Programação Orientada a Objetos. Salvador. 2011. (Apostila).
-
-## Livros
 
 [^Ascencio]: Ascencio, A. and Campos, E., 2008. Fundamentos Da Programação De Computadores. São Paulo: Pearson Prentice Hall.
 
@@ -27,8 +23,6 @@
 [^Santos]:R. Santos.Introdução à programação orientada a objetos usando Java. Campus, 2003.ISBN:9788535212068.
 
 [^Manzano]: Manzano, J. and Oliveira, J., 2005. Algoritmos. 17th ed. São Paulo (SP): Érica.
-
-## Sites
 
 [^camel]: Oracle. Code Conventions for the Java Programming Language: 9. Naming Conventions [https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html](https://www.oracle.com/java/technologies/javase/codeconventions-namingconventions.html) (Acessado em 17/07/2021)
 

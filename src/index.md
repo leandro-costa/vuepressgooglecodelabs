@@ -11,5 +11,5 @@ features:
   details: Step for google codelabs pages
 - title: PrintLayout.md
   details: Layout for view print
-footer: Made by Leandro Souza with ❤️
+footer: Made by Leandro Souza
 ---

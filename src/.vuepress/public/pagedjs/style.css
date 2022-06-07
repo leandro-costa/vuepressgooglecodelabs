@@ -148,7 +148,7 @@ figcaption:not(.no-counter)::before {
     }
 }
 
-h1 { string-set: section content(text);	}
+h1 { string-set: section content(text);	string-set: subsection content();	}
 h2 { string-set: subsection content(text); }
 @page {
 	@top-right { content: string(section) " - " string(subsection);

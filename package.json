@@ -14,6 +14,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@mdi/font": "^6.7.96",
     "vuepress": "^1.5.3"
   },
   "dependencies": {

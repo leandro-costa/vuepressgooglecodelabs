@@ -58,9 +58,9 @@ Mamifero animalMamifero = new Morcego();
 animalMamifero.mamar();
 animalMamifero.voar();//erro
 ```
-- Todo _Morcego_ **é um** _Mamifero_, porem não pode realizar todas as ações de um _morcego_
-- A variável _animalMamifero_ que recebe o objeto é do tipo _Mamifero_
-- Para o _Morcego_ _voar_ é necessário criar uma nova variável do tipo _Morcego_ e atribuir o objeto que estava na variável _animalMamifero_
+- Todo `Morcego` **é um** `Mamifero`, porem não pode realizar todas as ações de um `morcego`
+- A variável `animalMamifero` que recebe o objeto é do tipo `Mamifero`
+- Para o `Morcego` `voar` é necessário criar uma nova variável do tipo `Morcego` e atribuir o objeto que estava na variável _animalMamifero_
 ```java
 Mamifero animalMamifero = new Morcego();
 animalMamifero.mamar();
@@ -69,7 +69,7 @@ batman.voar();
 ```
 - Este tipo de operação recebe o nome de **TYPE CAST**
 
-<figure>
+<Figure figcaption="UML Herança Morcego e Mamifero.">
 
 @startuml
 
@@ -87,10 +87,9 @@ class Morcego{
 Mamifero <|-- Morcego
 @enduml
 
-<figcaption> UML Herança Morcego e Mamifero.</figcaption>
-</figure>
+</Figure>
 
-<figure>
+<Figure figcaption="Criando um objeto a partir da subclasse.">
 
 @startuml Criando um objeto a partir da subclasse
 
@@ -105,8 +104,8 @@ label "altura\npeso\nmamar()" #aliceblue;text:blue
 
 @enduml
 
-<figcaption>Criando um objeto a partir da subclasse.</figcaption>
-</figure>
+
+</Figure>
 
 
  ## Outros exemplos
@@ -181,19 +180,18 @@ class Gerente extends Funcionario {
 
 Em todo momento que criarmos um objeto do tipo Gerente, este objeto possuirá também os atributos definidos na classe Funcionario, pois um Gerente **é um** Funcionario:
 
-<figure>
+<Figure figcaption="Herança entre Funcionario e Gerente.">
 
 @startuml
 Funcionario <|-- Gerente
 @enduml
 
-<figcaption>Herança entre Funcionario e Gerente.</figcaption>
-</figure>
+</Figure>
 
 
-<figure>
+<Figure figcaption="Criando um objeto a partir da subclasse.">
 
-@startuml Criando um objeto a partir da subclasse
+@startuml 
 
 label "new Gerente()"
 
@@ -206,8 +204,7 @@ label "nome\ncpf\nsalario" #aliceblue;text:blue
 
 @enduml
 
-<figcaption>Criando um objeto a partir da subclasse.</figcaption>
-</figure>
+</Figure>
 
 
 ```java
@@ -254,7 +251,8 @@ Fique claro que essa é uma decisão de negócio. Se `Diretor` vai estender de `
 Uma classe pode ter várias filhas, mas pode ter apenas uma mãe, é a chamada herança simples do java.
 
 
-<figure>
+<Figure figcaption="Herança de Diretor, Engenheiro, Secretario, Gerente com Funcionario.">
+
 
 @startuml
 Funcionario <|-- Engenheiro
@@ -264,8 +262,7 @@ Gerente <|-- Diretor
 
 @enduml
 
-<figcaption>Herança de Diretor, Engenheiro, Secretario, Gerente com Funcionario</figcaption>
-</figure>
+</Figure>
 
 
 ### K19
@@ -376,15 +373,14 @@ Aplicando herança, teríamos a classe `Servico` com os atributos e métodos que
 
 As classes específicas seriam "ligadas" de alguma forma à classe `Servico` para reaproveitar o código nela definido. Esse relacionamento entre as classes é representado em UML pelo diagrama abaixo
 
-<figure>
+<Figure figcaption="Árvore de herança dos serviços">
 
 @startuml
 Servico <|-- SeguroDeVeiculo
 Servico <|-- Emprestimo
 @enduml
 
-<figcaption>Árvore de herança dos serviços</figcaption>
-</figure>
+</Figure>
 
 
 Os objetos das classes específicas `Emprestimo` e `SeguroDeVeiculo` possuiriam tanto os atributos e métodos definidos nessas classes quanto os definidos na classe `Servico`.
@@ -425,7 +421,7 @@ A classe genérica é denominada super classe, classe base ou classe mãe. As cl
 
 Quando o operador `new` é aplicado em uma sub classe, o objeto construído possuirá os atributos e métodos definidos na sub classe e na super classe.
 
-<figure>
+<Figure figcaption="Criando um objeto a partir da subclasse.">
 
 @startuml Criando um objeto a partir da subclasse
 
@@ -440,7 +436,6 @@ label "contratante\nresponsavel\ndataDeContratacao" #aliceblue;text:blue
 
 @enduml
 
-<figcaption>Criando um objeto a partir da subclasse.</figcaption>
 </figure>
 
 
@@ -654,12 +649,16 @@ class TesteConstrutor {
 ```
 
 
+<Figure figcaption="Diagrama de classe da herança de Emprestimo e Servico">
 
 @startuml Herança Emprestimo Servico class diagram
 Servico <|-- Emprestimo 
 @enduml
 
+</Figure>
 
+
+<Figure figcaption="Diagrama de sequencia da herança de Emprestimo e Servico">
 
 @startuml Herança Emprestimo Servico sequence diagram
 hide footbox
@@ -680,4 +679,4 @@ ref over Emprestimo
 end ref
 @enduml
 
-
+</Figure>
