@@ -5,8 +5,6 @@
  */
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
-import VueRouter from 'vue-router'
-import VueHead from 'vue-head'
 export default ({
   Vue, // the version of Vue being used in the VuePress app
   options, // the options for the root Vue instance
@@ -14,8 +12,5 @@ export default ({
   siteData // site metadata
 }) => {
   Vue.use(Vuetify)
-  options.vuetify = new Vuetify({})
-  Vue.use(VueRouter)
-  Vue.use(VueHead)
-  
+  options.vuetify = new Vuetify({}) 
 }

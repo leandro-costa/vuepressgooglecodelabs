@@ -4,6 +4,8 @@ codelabId: codelab-demo-id
 codelabTitle: A codelab demo
 ---
 
+# Google Codelab
+
 <Step label="Course Step 1" duration="5" >
 
 ### Profile card example

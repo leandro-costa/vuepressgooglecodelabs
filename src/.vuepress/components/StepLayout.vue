@@ -3,7 +3,6 @@
   <google-codelab :id="data.codelabId" :title="data.codelabTitle">
     <Content/>
   </google-codelab>
-
 </div>
 
 </template>
@@ -12,27 +11,36 @@
 
 export default {
   name: 'StepLayout',
+  created() {
+    if (typeof window !== 'undefined') {
+      let headElement = window.document.createElement("script");
+      headElement.setAttribute("src", "https://storage.googleapis.com/codelab-elements/native-shim.js");
+      window.document.head.appendChild(headElement);
+
+      headElement = window.document.createElement("script");
+      headElement.setAttribute("src", "https://storage.googleapis.com/codelab-elements/custom-elements.min.js");
+      window.document.head.appendChild(headElement);
+
+      headElement = window.document.createElement("script");
+      headElement.setAttribute("src", "https://storage.googleapis.com/codelab-elements/prettify.js");
+      window.document.head.appendChild(headElement);
+
+      headElement = window.document.createElement("script");
+      headElement.setAttribute("src", "https://storage.googleapis.com/codelab-elements/codelab-elements.js");
+      window.document.head.appendChild(headElement);
+
+      headElement = window.document.createElement("meta");
+      headElement.setAttribute("name", "viewport");
+      headElement.setAttribute("content", "width=device-width, minimum-scale=1.0,initial-scale=1.0, user-scalable=yes");
+      window.document.head.appendChild(headElement);
+
+    }
+  },
 
   computed: {
     data () {
       return this.$page.frontmatter
     }
-  },
-  head: {
-    link: [
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono' },
-      { rel: 'stylesheet', href: 'https://fonts.googleapis.com/icon?family=Material+Icons' },
-      { rel: 'stylesheet', href: 'https://storage.googleapis.com/codelab-elements/codelab-elements.css' },
-    ],
-    meta: [ 
-      { name: 'viewport', content: 'width=device-width, minimum-scale=1.0,initial-scale=1.0, user-scalable=yes' }
-    ],
-    script: [
-      { type: 'text/javascript', src: 'https://storage.googleapis.com/codelab-elements/native-shim.js'}, 
-      { type: 'text/javascript', src: 'https://storage.googleapis.com/codelab-elements/custom-elements.min.js'}, 
-      { type: 'text/javascript', src: 'https://storage.googleapis.com/codelab-elements/prettify.js'}, 
-      { type: 'text/javascript', src: 'https://storage.googleapis.com/codelab-elements/codelab-elements.js'}, 
-    ]
   }
 }
 </script>
@@ -40,6 +48,9 @@ export default {
 
 
 <style lang="stylus">
+@import url("https://fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url("https://storage.googleapis.com/codelab-elements/codelab-elements.css");
 #app
 .full
   width: 100%
