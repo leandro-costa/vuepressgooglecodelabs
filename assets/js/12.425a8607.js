@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{443:function(t,n,a){"use strict";a.r(n);var e={name:"LayoutVuetify",components:{Navbar:a(405).a}},s=a(66),o=Object(s.a)(e,(function(){var t=this.$createElement,n=this._self._c||t;return n("v-app",{attrs:{light:""}},[n("Navbar"),this._v(" "),n("Content")],1)}),[],!1,null,null,null);n.default=o.exports}}]);
