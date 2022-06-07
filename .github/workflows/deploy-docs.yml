@@ -29,19 +29,17 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-          cache: pnpm
+          cache: yarn
 
       - name: Install Deps
-        run: pnpm install --frozen-lockfile
+        run: yarn install
 
       - name: Build Docs
-        env:
-          NODE_OPTIONS: --max_old_space_size=4096
-        run: pnpm run docs:build
+        run: yarn build 
 
       - name: Deploy Docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           # This is the branch where the docs are deployed to
           branch: gh-pages
-          folder: docs/.vuepress/dist
+          folder: docs
