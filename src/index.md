@@ -3,7 +3,7 @@ home: true
 heroImage: https://v1.vuepress.vuejs.org/hero.png
 tagline: Vue press with google codelabs
 actionText: Quick Start →
-actionLink: home
+actionLink: login
 features:
 - title: StepLayout.vue
   details: Layout for google codelabs pages
