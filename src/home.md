@@ -1,5 +1,5 @@
 ---
-layout: LayoutVuetify
+layout: LayoutMenuVuetify
 ---
 
 # Home
