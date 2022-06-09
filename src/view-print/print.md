@@ -2,6 +2,8 @@
 layout: PrintLayout
 ---
 
+[[toc]]
+
 # Print Version
 
 !!!include(src/view-print/noprint.md)!!!
