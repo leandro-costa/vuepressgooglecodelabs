@@ -31115,7 +31115,7 @@ class handlers extends Paged.Handler {
 		createToc({
 			content: content,
 			tocElement: '#toc',
-			titleElements: ['h1:not(:is(.cover-page h1,.table-of-contents h1))', 'h2:not(.cover-header)']
+			titleElements: ['h1:not(.table-of-contents h1)', 'h2:not(.cover-header)']
 		});
 	}
 }
