@@ -31105,18 +31105,3 @@
 	return previewer;
 
 })));
-
-
-class handlers extends Paged.Handler {
-	constructor(chunker, polisher, caller) {
-		super(chunker, polisher, caller);
-	}
-	beforeParsed(content) {
-		createToc({
-			content: content,
-			tocElement: '#toc',
-			titleElements: ['h1:not(.table-of-contents h1)', 'h2:not(.cover-header)']
-		});
-	}
-}
-Paged.registerHandlers(handlers);
