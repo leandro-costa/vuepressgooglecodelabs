@@ -1,9 +1,9 @@
 const { description } = require('../../package')
-
+const tocPlugin = require('markdown-it-table-of-contents')
 const glob = require('glob')
 
 // function for loading all MD files in a directory
-const getChildren = function(parent, path) {
+const getChildren = function (parent, path) {
   return glob
     .sync(parent + '/' + path + '/**/*.md')
     .map(f => {
@@ -19,8 +19,8 @@ const getChildren = function(parent, path) {
 }
 
 module.exports = {
-  
-  base:'/vuepressgooglecodelabs',
+
+  base: '/vuepressgooglecodelabs',
   dest: 'docs',
 
   /**
@@ -58,7 +58,7 @@ module.exports = {
       {
         text: 'Coures',
         link: '/step-coures/',
-      }      
+      }
     ],
     sidebar: [
       {
@@ -73,18 +73,18 @@ module.exports = {
         children: getChildren('src', 'view-print')
       }
     ]
-    
+
   },
-  
+
   markdown: {
 
     extendMarkdown: md => {
-        md.use(require("markdown-it-plantuml"))
-        md.use(require("markdown-it-footnote"))
-        md.use(require("markdown-it-deflist"))
-        md.use(require("markdown-it-katex"))
-        md.use(require("markdown-it-include"))
-        //md.use(require("markdown-it-task-lists"))
+      md.use(require("markdown-it-plantuml"))
+      md.use(require("markdown-it-footnote"))
+      md.use(require("markdown-it-deflist"))
+      md.use(require('markdown-it-mathjax3'), { tex: {tags: 'ams'}})
+      md.use(require("markdown-it-include"))
+      md.use(require("markdown-it-table-of-contents"))
     },
     lineNumbers: true
 
@@ -96,11 +96,11 @@ module.exports = {
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-     ['@vuepress/plugin-medium-zoom', {
-            options: {
-                margin: 0,
-                background: '#252525'
-            }
-        }],
+    ['@vuepress/plugin-medium-zoom', {
+      options: {
+        margin: 0,
+        background: '#252525'
+      }
+    }]
   ]
 }
