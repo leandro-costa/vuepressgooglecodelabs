@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[13],{444:function(t,n,e){"use strict";e.r(n);var a={name:"LayoutVuetifyLogin",created:function(){}},u=e(66),i=Object(u.a)(a,(function(){var t=this.$createElement,n=this._self._c||t;return n("v-app",{attrs:{light:""}},[n("Layout")],1)}),[],!1,null,null,null);n.default=i.exports}}]);

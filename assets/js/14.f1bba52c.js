@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[14],{459:function(t,n,e){"use strict";e.r(n);var l=e(66),s=Object(l.a)({},(function(){var t=this.$createElement,n=this._self._c||t;return n("v-app",{attrs:{light:""}},[n("Content")],1)}),[],!1,null,null,null);n.default=s.exports}}]);
