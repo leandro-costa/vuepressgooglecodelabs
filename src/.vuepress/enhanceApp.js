@@ -4,7 +4,7 @@
  * https://v1.vuepress.vuejs.org/guide/basic-config.html#app-level-enhancements
  */
 
-import {LoaderPlugin} from 'vue-google-login'
+import LoaderPlugin from 'vue-google-login'
 import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.css'
 import '@mdi/font/css/materialdesignicons.css'

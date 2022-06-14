@@ -34,11 +34,7 @@ Para acessar as paginas desse material é necessário se identificar.
             onSuccess(googleUser) {
                 console.log(googleUser);
                 // This only gets the user information: id, name, imageUrl and email
-                console.log(googleUser.getBasicProfile());
-                Vue.GoogleAuth.then(auth2 => {
-                    console.log("Vue.GoogleAuth"+auth2.isSignedIn.get());
-                    console.log(auth2.currentUser.get())
-                })                
+                //console.log(googleUser.getBasicProfile());
                 this.$router.push({ path: '/home' })
                 .catch(error => {
                     console.info(error.message)
